@@ -41,6 +41,9 @@ namespace MacroPlanner
             services.AddAuthentication()
                 .AddIdentityServerJwt();
             services.AddControllersWithViews();
+
+            services.AddSwaggerGen();
+
             services.AddRazorPages();
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
@@ -70,6 +73,11 @@ namespace MacroPlanner
             {
                 app.UseSpaStaticFiles();
             }
+
+            //Enable Swagger middleware and UI
+            //Remove in production
+            app.UseSwagger();
+            app.UseSwaggerUI();
 
             app.UseRouting();
 
