@@ -19,7 +19,7 @@ namespace MacroPlanner.Entity
 
         public int OwnerId { get; set; }
         public virtual ApplicationUser Owner { get; set; }
-        public virtual List<Task> Tasks { get; set; }
+        public virtual List<BoardTask> Tasks { get; set; }
 
     }
 }

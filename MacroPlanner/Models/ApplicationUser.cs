@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using MacroPlanner.Entity;
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,5 +9,9 @@ namespace MacroPlanner.Models
 {
     public class ApplicationUser : IdentityUser
     {
+        public virtual List<Board> Boards { get; set; }
+
+
+
     }
 }

@@ -15,7 +15,7 @@ namespace MacroPlanner.Entity
         Done
         };
 
-    public class Task
+    public class BoardTask
     {
         [Key]
         public int Id { get; set; }
@@ -49,6 +49,7 @@ namespace MacroPlanner.Entity
         public ApplicationUser Assignee { get; set; }
 
         [Required]
+
         public int AssignerId { get; set; }
 
         public ApplicationUser Assigner { get; set; }

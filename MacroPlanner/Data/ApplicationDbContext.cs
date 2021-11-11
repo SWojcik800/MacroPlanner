@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MacroPlanner.Entity;
 
 namespace MacroPlanner.Data
 {
@@ -17,5 +18,8 @@ namespace MacroPlanner.Data
             IOptions<OperationalStoreOptions> operationalStoreOptions) : base(options, operationalStoreOptions)
         {
         }
+        public DbSet<Entity.Board> Boards { get; set; }
+        public DbSet<Entity.BoardTask> Tasks{ get; set; }
+        public DbSet<BoardMembers> BoardMembers { get; set; }
     }
 }
